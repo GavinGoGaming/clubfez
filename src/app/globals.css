@@ -1,0 +1,218 @@
+@import url("https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Lansbury";
+  src: url(/lansbury.ttf);
+}
+:root {
+  --brown: #402718;
+  --bg: #e9cbc7;
+  --menu-size: 300px;
+  --menu-size-negative: calc(var(--menu-size) * -1);
+}
+html, body {
+  color: black;
+  background: var(--bg);
+  height: 100vh;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+b {
+  font-weight: 600;
+}
+@keyframes closing {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: var(--menu-size-negative);
+  }
+}
+@keyframes opening {
+  0% {
+    right: var(--menu-size-negative);
+  }
+  100% {
+    right: 0;
+  }
+}
+/* .split > .split-left+.split-right is a 60-40 split. */
+.split {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.split-left {
+  flex: 5;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  background-image: url(/tall.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: sticky;
+  right: 0;
+  top: 0;
+}
+.section {
+  position: relative;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.menu-button {
+  color: var(--brown);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  font-size: 1.25rem;
+  background: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--brown);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.menu-button:hover {
+  font-size: 1.5rem;
+}
+.section > h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-family: "Lansbury", sans-serif;
+}
+.split-right {
+  flex: 5;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.click {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card > img {
+  border-radius: 15px;
+}
+.card > span {
+  font-size: 1rem;
+}
+.click {
+  padding: 10px 20px;
+  border: 1px solid var(--brown);
+  border-radius: 100px;
+  transition: all 0.25s;
+}
+.click:hover {
+  background: var(--brown);
+  color: white;
+}
+
+span {
+  color: var(--brown);
+  font-size: 1.5rem;
+}
+
+a:not(.click) {
+  color: #642600;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.map {
+  width: 80%;
+  height: 12rem;
+  border: 1px solid var(--brown);
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.map > iframe {
+  height: calc(100% + 15px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  width: var(--menu-size);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: var(--menu-size-negative);
+  background: var(--bg);
+  z-index: 4;
+  padding: 20px;
+  background: white;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.1);
+}
+.menu.open {
+  animation: opening 0.25s forwards;
+}
+.menu:not(.open) {
+  animation: closing 0.25s forwards;
+}
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-items > a {
+  text-decoration: none !important;
+  font-size: 1.25rem;
+}
+.mobile-only {
+  display: none;
+}
+@media only screen and (max-width: 750px) {
+  /* split left is now on top and not sticky image */
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .split {
+    flex-direction: column;
+    display: block;
+  }
+  .split-left {
+    flex: 3;
+  }
+  .split-right {
+    flex: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .image {
+    position: relative;
+    background-image: url(/tall.jpg);
+    height: 30vh;
+  }
+
+}
