@@ -1,4 +1,5 @@
 @import url("https://site-assets.fontawesome.com/releases/v6.5.0/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,17 +8,18 @@
   src: url(/lansbury.ttf);
 }
 :root {
-  --brown: #402718;
-  --bg: #e9cbc7;
+  --brown: #F1B057;
+  --bg: black;
+  --red: #9F2B27;
   --menu-size: 300px;
   --menu-size-negative: calc(var(--menu-size) * -1);
 }
 html, body {
-  color: black;
+  color: white;
   background: var(--bg);
   height: 100vh;
   scroll-behavior: smooth !important;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 b {
   font-weight: 600;
@@ -45,7 +47,25 @@ b {
   height: 100%;
 }
 .split-left {
-  flex: 5;
+  flex: 4;
+}
+nav {
+  height: 20vh;
+  width: 100%;
+  background-image: url(/pattern.png);
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+}
+.center-horizontal {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  justify-content: center;
+  background-image: url("/CLUB FEZ NEW.png");
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 .image {
   width: 100%;
@@ -58,11 +78,24 @@ b {
   right: 0;
   top: 0;
 }
+* {
+  scroll-behavior: smooth;
+}
 .section {
   position: relative;
+  max-width: 100%;
 }
 ::-webkit-scrollbar {
-  display: none;
+  width:7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brown);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 10px;
+  max-width: 5px;
 }
 .menu-button {
   color: var(--brown);
@@ -85,7 +118,28 @@ b {
 .menu-button:hover {
   font-size: 1.5rem;
 }
-.section > h2 {
+.presents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8vh;
+}
+.presents > img {
+  width: 60%;
+  border: 8px solid var(--brown);
+}
+.party-image {
+  border: 7px solid var(--brown);
+}
+.section-detail {
+  width: 100%;
+  background-image: url(/deco.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 40px;
+}
+div > h2 {
   font-size: 2.5rem;
   font-weight: 500;
   margin: 0;
@@ -93,9 +147,11 @@ b {
   font-family: "Lansbury", sans-serif;
 }
 .split-right {
-  flex: 5;
+  flex: 6;
   padding: 20px;
-  overflow: scroll;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+  height: 80vh;
 }
 
 .click {
@@ -104,6 +160,8 @@ b {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--red);
+  font-size: 1.5rem;
 }
 .buttons {
   display: flex;
@@ -121,7 +179,6 @@ b {
 }
 .click {
   padding: 10px 20px;
-  border: 1px solid var(--brown);
   border-radius: 100px;
   transition: all 0.25s;
 }
@@ -129,14 +186,26 @@ b {
   background: var(--brown);
   color: white;
 }
-
-span {
+.buttons > a > span, .buttons > a > i {
+  color: white;
+}
+h2 {
   color: var(--brown);
+}
+span {
   font-size: 1.5rem;
+  font-family: 'Josefin Slab';
+  font-weight: 500;
+}
+
+.faq-question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--brown);
 }
 
 a:not(.click) {
-  color: #642600;
+  color: var(--brown);
   text-decoration: underline;
   font-size: 1.5rem;
 }
@@ -203,16 +272,17 @@ a:not(.click) {
     flex: 3;
   }
   .split-right {
-    flex: 7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
   }
   .image {
     position: relative;
     background-image: url(/tall.jpg);
     height: 30vh;
   }
-
+  .mobile100 {
+    width: 100% !important;
+  }
+  nav {
+    background-size: 200%;
+  }
 }
