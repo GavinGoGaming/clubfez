@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { Button, CssVarsProvider, ThemeProvider } from "@mui/joy";
+import { Accordion, AccordionDetails, AccordionSummary, Button, CssVarsProvider, ThemeProvider } from "@mui/joy";
 import { useState, ReactNode, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { CoordinateRegion, Marker, Map } from "mapkit-react";
@@ -201,7 +201,7 @@ export default function Home() {
               <br />
 
               <span><b className="faq-question">Is there a gifts registry?</b></span>
-              <span>If you want to offer a wedding gift to Chris and Wendy check out the wedding registry (three donation ideas). Thanks</span>
+              <span>If you want to offer a wedding gift to Chris and Wendy check out the <a href="https://www.hitchd.com/wendyandchris" target="_blank">wedding registry</a> (three donation ideas). Thanks</span>
               <br />
 
               <span><b className="faq-question">Will the party be live streamed?</b></span>
