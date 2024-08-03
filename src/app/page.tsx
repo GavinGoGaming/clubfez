@@ -11,11 +11,6 @@ import "yet-another-react-lightbox/styles.css";
 declare let Math: any;
 declare let window: any;
 
-// 9 photos of https://source.unsplash.com/random/500x360?nature
-const photosOne = ["https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature"];
-const photosTwo = ["https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature"];
-const photosThree = ["https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature", "https://source.unsplash.com/random/500x360?nature"];
-
 function Gap({ height = 20 }: { height?: number }) {
   return <div className="gap" style={{ height: height }} />;
 }
@@ -83,6 +78,15 @@ export default function Home() {
   }
   return (
     <>
+    
+        <Lightbox
+        open={lbOpen}
+        close={() => setLbOpen(false)}
+        slides={[{
+          src: "/PARTY_INVITE.png",
+          alt: "Mystical Ritual"
+        }]}
+      />
       <CssVarsProvider defaultMode="light">
         {/* <div className="menu-button" onClick={()=>{document.querySelector('.menu')?.classList.toggle('open')}}>
         <i className="fa-solid fa-bars"></i>
@@ -97,14 +101,24 @@ export default function Home() {
       </div> */}
         <nav>
           <div className="center-horizontal">
-            <img src="/CLUB FEZ NEW.png" alt="" />
+            <div className="nbml" style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+              <Button className="nav-button" onClick={()=>{
+                window.location.href="/";
+              }}>CURRENT</Button>
+            </div>
+            <img src="/CLUB FEZ NEW.png" alt="" className="pointer" />
+            <div className="nbmr" style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+              <Button className="nav-button" onClick={()=>{
+                window.location.href="/events";
+              }}>PAST</Button>
+            </div>
           </div>
         </nav>
         <div className="split">
           <div className="split-left desktop-only">
             <div className="presents">
               <h2>Presents...</h2>
-              <img src="/PARTY_INVITE.png" alt="" />
+              <img src="/PARTY_INVITE.png" onClick={()=>{setLbOpen(true)}} alt="" />
             </div>
           </div>
           <div className="split-right">
@@ -112,9 +126,10 @@ export default function Home() {
               <img src="/PARTY_INVITE.png" className="mobile-only party-image" alt="" />
               <Gap/>
               <h2>SCHEDULE</h2>
-              <span>Arrivals after 9PM, Please arrive before 11PM.</span>
-              <span>Dessert and Cocktails</span>
-              <span>Dancing on the Club Fez dance floor.</span>
+              <span>Club Fez presents: Mystical Ritual</span>
+              <span>Saturday, October 12, 2024</span>
+              <span>A private party, by invitation only, 21 and over</span>
+              <span>Dress: enchanting, wild, beauty</span>
             </SmallCentered>
             <SmallCentered id="address">
               <h2>ADDRESS</h2>
@@ -149,7 +164,7 @@ export default function Home() {
               <br />
 
               <span><b className="faq-question">Is this a wedding?</b></span>
-              <span>This will be very wedding-vibe but is designed for close friends after Chris and Wendy's family wedding earlier in the day.</span>
+              <span>Yes, it’s the culmination party of our wedding day.  It happens immediately after our family ceremony at Marrakesh House. It’s when the reception opens up and transforms into the Club Fez many of you know from our theme parties. Call up your creativity and get ready to dance at “Mystical Ritual.”</span>
               <br />
 
               <span><b className="faq-question">Do I need to have a ticket?</b></span>
@@ -248,11 +263,6 @@ export default function Home() {
           </div>
         </div>
       </CssVarsProvider>
-      <Lightbox
-        open={lbOpen}
-        close={() => setLbOpen(false)}
-        slides={photosOne.concat(photosTwo).concat(photosThree).map((photo, index) => ({ src: photo, caption: `Photo ${index + 1}` }))}
-      />
     </>
   );
 }
