@@ -80,7 +80,7 @@ nav {
 .image {
   width: 100%;
   height: 100%;
-  background-image: url(/tall.jpg);
+  background-image: url(/PARTY_INVITE.jpg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -329,7 +329,7 @@ a:not(.click) {
   }
   .image {
     position: relative;
-    background-image: url(/tall.jpg);
+    background-image: url(/PHOTO_INVITE.jpg);
     height: 30vh;
   }
   .mobile100 {
