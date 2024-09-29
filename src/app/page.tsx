@@ -116,9 +116,16 @@ export default function Home() {
         </nav>
         <div className="split">
           <div className="split-left desktop-only">
-            <div className="presents">
+            <div className="presents" style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+            }}>
               <h2>Presents...</h2>
-              <img src="/PARTY_INVITE.png" onClick={()=>{setLbOpen(true)}} alt="" />
+              <img style={{
+                width: '50%'
+              }} src="/PARTY_INVITE.png" onClick={()=>{setLbOpen(true)}} alt="" />
             </div>
           </div>
           <div className="split-right">
@@ -180,7 +187,7 @@ export default function Home() {
               <br />
 
               <span><b className="faq-question">What will the weather be like?</b></span>
-              <span>Usually in the 60s at night but please check weather for Culver City before heading over.</span>
+              <span>Usually in the 60s at night but please check weather for Culver City before heading over. Definitely bring a warm coat.</span>
               <br />
 
               <span><b className="faq-question">What should I wear?</b></span>
@@ -188,7 +195,7 @@ export default function Home() {
               <br />
 
               <span><b className="faq-question">Do you have costume ideas to consider?</b></span>
-              <span>Sure! We've set up a costume ideas site here: <a href="https://fb.me/1Pohcuh3pDDR3zk">https://fb.me/1Pohcuh3pDDR3zk</a>.</span>
+              <span>The vibe is a little bit boho, art deco, & art nouveau mixed with mystical and mythical creatures & beings. Be creative & colorful with your costume ideas and have fun! For more ideas, please check out our <a href="https://fb.me/1Pohcuh3pDDR3zk">Club Fez mystical ritual Facebook page</a>.</span>
               <br />
 
               <span><b className="faq-question">What's the venue like?</b></span>
@@ -196,7 +203,7 @@ export default function Home() {
               <br />
 
               <span><b className="faq-question">Is Club Fez indoors or outdoors?</b></span>
-              <span>Most of this party will be outdoors and we'll arrange tents if rain is expected. Dancing will be in the central courtyard of our house.</span>
+              <span>Most of this party will be outdoors, but portions of the house will also be open.</span>
               <br />
 
               <span><b className="faq-question">If I'm coming in from out of town, where should I stay?</b></span>

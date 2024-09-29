@@ -81,6 +81,9 @@ export default function Home() {
           },{
             src: "/poster3.png",
             alt: "Nordic Vinter"
+          },{
+            src: "/ono.jpg",
+            alt: "One Night Only"
           }
         ]}
       />
@@ -123,6 +126,10 @@ export default function Home() {
             <div className="presents">
               <h2>Nordic Vinter</h2>
               <img src="/poster3.png" onClick={()=>{setIndexlb(2)}} alt="" />
+            </div>
+            <div className="presents">
+              <h2>One Night Only</h2>
+              <img src="/ono.jpg" onClick={()=>{setIndexlb(2)}} alt="" />
             </div>
         </div>
       </CssVarsProvider>

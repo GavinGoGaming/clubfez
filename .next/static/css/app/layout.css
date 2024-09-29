@@ -482,7 +482,6 @@ html, body {
   background: var(--bg);
   height: 100vh;
   scroll-behavior: smooth !important;
-  overflow: hidden;
 }
 b {
   font-weight: 600;
@@ -507,7 +506,7 @@ b {
 .split {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 80vh;
 }
 .split-left {
   flex: 4;
@@ -534,7 +533,7 @@ nav {
 .nav-button {
   background: transparent !important;
   transition: all 0.25s;
-  font-family: "Josefin Slab";
+  font-family: "Josefin Slab" !important;
   font-size: 1.5rem;
 }
 .nav-button:hover {
@@ -543,7 +542,7 @@ nav {
 .image {
   width: 100%;
   height: 100%;
-  background-image: url(/tall.jpg);
+  background-image: url(/PARTY_INVITE.jpg);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -591,12 +590,6 @@ nav {
 .menu-button:hover {
   font-size: 1.5rem;
 }
-.presents {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 8vh;
-}
 .pointer {
   cursor: pointer;
 }
@@ -609,15 +602,17 @@ nav {
 }
 .three-posters {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
+  margin-top: 8vh;
 }
 .three-posters img {
-  width: 50%;
+  width: 70%;
   border: 8px solid var(--brown);
 }
 .three-posters > .presents {
   display: flex;
-  width: 33%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -792,7 +787,7 @@ a:not(.click) {
   }
   .image {
     position: relative;
-    background-image: url(/tall.jpg);
+    background-image: url(/PHOTO_INVITE.jpg);
     height: 30vh;
   }
   .mobile100 {
@@ -802,6 +797,7 @@ a:not(.click) {
     background-size: 200%;
   }
 }
+
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Alegreya_Sans_SC","arguments":[{"weight":"300","subsets":["latin"]}],"variableName":"alegreya"} ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
