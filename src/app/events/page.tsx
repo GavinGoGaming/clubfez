@@ -84,6 +84,12 @@ export default function Home() {
           },{
             src: "/ono.jpg",
             alt: "One Night Only"
+          },{
+            src: "/vr_MH.png",
+            alt: "Marrakesh House VR NYE 2021"
+          },{
+            src: "/uncharted_waters_without_date_info.png",
+            alt: "Uncharted Waters NYE 2017"
           }
         ]}
       />
@@ -129,9 +135,23 @@ export default function Home() {
             </div>
             <div className="presents">
               <h2>One Night Only</h2>
-              <img src="/ono.jpg" onClick={()=>{setIndexlb(2)}} alt="" />
+              <img src="/ono.jpg" onClick={()=>{setIndexlb(3)}} alt="" />
             </div>
         </div>
+        <div className="three-posters">
+            <div className="presents">
+              <h2>Marrakesh House VR NYE 2021</h2>
+              <img src="/vr_MH.png" onClick={()=>{setIndexlb(4)}} alt="" />
+            </div>
+            <div className="presents">
+              <h2>Uncharted Waters NYE 2017</h2>
+              <img src="/uncharted_waters_without_date_info.png" onClick={()=>{setIndexlb(5)}} alt="" />
+            </div>
+        </div>
+        <div style={{
+          height: '8vh',
+          width: '100%'
+        }}></div>
       </CssVarsProvider>
     </>
   );
