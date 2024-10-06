@@ -151,7 +151,7 @@ export default function Home() {
                   RSVP Here
                 </Link>
                 <Link className="click clickothercolor" href="/mystical-ritual" style={{ width: '200px' }}>
-                  See Details
+                  Details
                 </Link>
               </div>
               <Gap height={40} />
