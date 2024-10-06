@@ -12,11 +12,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/events/page": [
+    "/mystical-ritual/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/events/page.css",
-      "static/chunks/app/events/page.js"
+      "static/css/app/mystical-ritual/page.css",
+      "static/chunks/app/mystical-ritual/page.js"
     ]
   }
 }

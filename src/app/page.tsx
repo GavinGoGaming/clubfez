@@ -150,11 +150,8 @@ export default function Home() {
                 <Link className="click" href="https://partiful.com/e/RFzmStNEzc6lFKf2AGdT" target="_blank" style={{ width: '200px' }}>
                   RSVP Here
                 </Link>
-                <Link href="#" onClick={()=>{
-                  window.scrollToThing(document.getElementById('details'));
-                }} style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
-                  <span style={{ fontSize: '16px', width: '120%', textAlign: 'center' }}>MORE DETAILS</span>
-                  <i className="fa-solid fa-caret-down"></i>
+                <Link className="click clickothercolor" href="/mystical-ritual" style={{ width: '200px' }}>
+                  All The Details
                 </Link>
               </div>
               <Gap height={40} />
