@@ -125,7 +125,7 @@ export default function Home() {
                         </SmallCentered>
                         <SmallCentered id="details">
                             <span><b className="faq-question">ARRIVALS</b></span>
-                            <span>Optimal time for arrivals is between 8:45 and 10PM. If you’re planning to come later, please email (xxxxxxxxx) so we can give your name to the gate for late arrivals.</span>
+                            <span>Optimal time for arrivals is between 8:45 and 10PM. If you’re planning to come later, please email <a href="mailto:rblakedesign@gmail.com" target="_blank">Rebecca Blake</a> so we can give your name to the gate for late arrivals.</span>
                             <br />
 
                             <span><b className="faq-question">RIDESHARE and PARKING</b></span>
