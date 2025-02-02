@@ -1,5 +1,6 @@
 **/node_modules
-# .next direcotry
 **/.next
-.next/*
+.next/**
 .next
+**/.next/**
+API_KEY*.*

@@ -1,22 +1,16 @@
 {
   "pages": {
-    "/page": [
+    "/events/[...event]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/css/app/events/[...event]/page.css",
+      "static/chunks/app/events/[...event]/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/mystical-ritual/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/mystical-ritual/page.css",
-      "static/chunks/app/mystical-ritual/page.js"
     ]
   }
 }

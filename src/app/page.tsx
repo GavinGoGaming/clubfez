@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CoordinateRegion, Marker, Map } from "mapkit-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Navbar from "./utils/Navbar";
 
 // define window as any
 declare let Math: any;
@@ -78,7 +79,6 @@ export default function Home() {
   }
   return (
     <>
-    
         <Lightbox
         open={lbOpen}
         close={() => setLbOpen(false)}
@@ -88,32 +88,7 @@ export default function Home() {
         }]}
       />
       <CssVarsProvider defaultMode="light">
-        {/* <div className="menu-button" onClick={()=>{document.querySelector('.menu')?.classList.toggle('open')}}>
-        <i className="fa-solid fa-bars"></i>
-      </div>
-      <div className="menu">
-        <div className="menu-items">
-          <Link href="#title" onClick={closeMenu}><Icon icon="home"/> Home</Link>
-          <Link href="#registry" onClick={closeMenu}><Icon icon="honey-pot"/> Registry</Link>
-          <Link href="#details" onClick={closeMenu}><Icon icon="memo-pad"/> Details</Link>
-          <Link href="#hotels" onClick={closeMenu}><Icon icon="hotel"/> Accomodations</Link>
-        </div>
-      </div> */}
-        <nav>
-          <div className="center-horizontal">
-            <div className="nbml" style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-              <Button className="nav-button" onClick={()=>{
-                window.location.href="/";
-              }}>CURRENT</Button>
-            </div>
-            <img src="/CLUB FEZ NEW.png" alt="" className="pointer" />
-            <div className="nbmr" style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-              <Button className="nav-button" onClick={()=>{
-                window.location.href="/events";
-              }}>PAST</Button>
-            </div>
-          </div>
-        </nav>
+        <Navbar/>
         <div className="split">
           <div className="split-left desktop-only">
             <div className="presents" style={{
@@ -150,7 +125,7 @@ export default function Home() {
                 <Link className="click" href="https://partiful.com/e/RFzmStNEzc6lFKf2AGdT" target="_blank" style={{ width: '200px' }}>
                   RSVP Here
                 </Link>
-                <Link className="click clickothercolor" href="/mystical-ritual" style={{ width: '200px' }}>
+                <Link className="click clickothercolor" href="/current" style={{ width: '200px' }}>
                   Updates
                 </Link>
               </div>

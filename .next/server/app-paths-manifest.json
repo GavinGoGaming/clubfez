@@ -1,4 +1,6 @@
 {
-  "/page": "app/page.js",
-  "/mystical-ritual/page": "app/mystical-ritual/page.js"
+  "/events/[...event]/page": "app/events/[...event]/page.js",
+  "/api/images/route": "app/api/images/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/getImage/route": "app/api/getImage/route.js"
 }

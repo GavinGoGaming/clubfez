@@ -4,3 +4,11 @@ html, body {
 abrea {
     color: #ff5858;
 }
+.presents img {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.presents img:hover {
+    transform: scale(1.03);
+    border-color: #e99724;
+}

@@ -36,6 +36,7 @@ b {
   width: 130px;
   height: 130px;
   border-radius: 8px;
+  background-color: var(--brown);
   background-position: 50%;
   background-size: cover;
 }
@@ -346,7 +347,7 @@ a:not(.click) {
     flex: 3;
   }
   .split-right {
-
+    overflow-y: visible !important;
   }
   .image {
     position: relative;
