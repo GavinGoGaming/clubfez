@@ -3,7 +3,7 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 import { Readable } from 'stream';
 
-export async function GET(request: Request) {
+export async function GET(request: Request): Promise<void | Response> {
     const { searchParams } = new URL(request.url);
     const fileId = searchParams.get('fileId');
 
