@@ -1,10 +1,9 @@
 import { google } from 'googleapis';
 import path from 'path';
 import fs from 'fs';
-import { NextApiRequest, NextApiResponse } from 'next';
 import events from '@/app/utils/eventData';
 
-export async function GET(request: NextApiRequest) {
+export async function GET(request: Request) {
   const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
   const KEYFILEPATH = path.join(process.cwd(), 'API_KEY.json');
   const { searchParams } = new URL(request.url||"");
