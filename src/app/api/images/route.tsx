@@ -8,7 +8,7 @@ export async function GET(request: Request): Promise<void | Response> {
   const KEYFILEPATH = path.join(process.cwd(), 'API_KEY.json');
   const { searchParams } = new URL(request.url||"");
   if(!searchParams.has('event')) {
-    return { error: 'Event is required' };
+    return Response.json({ error: 'Event is required' });
   }
   let event = searchParams.get('event')||"none";
   if(!Object.keys(events).includes(event)) {

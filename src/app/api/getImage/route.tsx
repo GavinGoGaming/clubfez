@@ -8,7 +8,7 @@ export async function GET(request: Request): Promise<void | Response> {
     const fileId = searchParams.get('fileId');
 
     if (!fileId) {
-        return NextResponse.json({ error: 'File ID is required' }, { status: 400 });
+        return Response.json({ error: 'File ID is required' }, { status: 400 });
     }
 
     const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
@@ -43,6 +43,6 @@ export async function GET(request: Request): Promise<void | Response> {
         return new Response(webStream as any, { headers });
     } catch (error: any) {
         console.error('Error serving file:', error.message);
-        return NextResponse.json({ error: 'Failed to retrieve the file' }, { status: 500 });
+        return Response.json({ error: 'Failed to retrieve the file' }, { status: 500 });
     }
 }
