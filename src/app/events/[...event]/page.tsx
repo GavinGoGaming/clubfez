@@ -45,13 +45,6 @@ function Detail() {
     return <div className="section-detail"></div>
 }
 
-export async function generateStaticParams() {
-    const eventNames = Object.keys(events);
-    return eventNames.map(e => {
-        event: e
-    })
-}
-
 export default function Home({ params }: { params: { event: string } }) {
     const [event, setEvent] = useState<EventResponse | null>(null);
 
