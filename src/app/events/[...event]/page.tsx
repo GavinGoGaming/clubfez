@@ -8,6 +8,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useRouter } from "next/navigation";
 import Navbar from "@/app/utils/Navbar";
+import events from "@/app/utils/eventData";
 
 // define window as any
 declare let Math: any;
@@ -42,6 +43,13 @@ function Icon({ icon }: { icon: string }) {
 }
 function Detail() {
     return <div className="section-detail"></div>
+}
+
+export async function generateStaticParams() {
+    const eventNames = Object.keys(events);
+    return eventNames.map(e => {
+        event: e
+    })
 }
 
 export default function Home({ params }: { params: { event: string } }) {
