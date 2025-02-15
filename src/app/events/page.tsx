@@ -119,7 +119,7 @@ export default function Home() {
         <div className="three-posters">
             <div className="presents">
               <h2>Mystical Ritual</h2>
-              <img src="/PARTY_INVITE.png" onClick={()=>{router.push('/mystical-ritual')}} />
+              <img src="/PARTY_INVITE.png" onClick={swapToEventPage('mystical-ritual')} />
             </div>
             <div className="presents">
               <h2>Puttin' on the Ritz</h2>

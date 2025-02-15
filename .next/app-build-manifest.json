@@ -1,16 +1,58 @@
 {
   "pages": {
-    "/events/[...event]/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/events/[...event]/page.css",
-      "static/chunks/app/events/[...event]/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/current/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/current/page.css",
+      "static/chunks/app/current/page.js"
+    ],
+    "/events/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/page.css",
+      "static/chunks/app/events/page.js"
+    ],
+    "/events/mystical-ritual/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/mystical-ritual/page.css",
+      "static/chunks/app/events/mystical-ritual/page.js"
+    ],
+    "/events/puttin-on-the-ritz/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/puttin-on-the-ritz/page.css",
+      "static/chunks/app/events/puttin-on-the-ritz/page.js"
+    ],
+    "/events/uncharted-waters-nye-2017/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/uncharted-waters-nye-2017/page.css",
+      "static/chunks/app/events/uncharted-waters-nye-2017/page.js"
+    ],
+    "/events/nordic-vinter/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/nordic-vinter/page.css",
+      "static/chunks/app/events/nordic-vinter/page.js"
+    ],
+    "/events/one-night-only/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/events/one-night-only/page.css",
+      "static/chunks/app/events/one-night-only/page.js"
     ]
   }
 }
