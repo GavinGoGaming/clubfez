@@ -1,7 +1,7 @@
 Club Fez website
 
 ## Running (deploying to server)
-The club fez website is made using a *backend* so it can not run using static hosting.
+The club fez website (old ver) is made using a *backend* so it can not run using static hosting.
 
 1. add API_KEY.json as google api key (if its already there, you're good to go)
 2. deploy to a server that can run the app using `npm start`
